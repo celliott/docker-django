@@ -17,7 +17,7 @@ clean :
 prep :
 	rm -rf build && mkdir -p build
 	git clone https://github.com/technivore/django-hello-world build
-	echo "Flask\ngunicorn\nrequests" >> build/requirements.txt
+	echo "Flask\ngunicorn\nrequests\nvirtualenv\nvirtualenvwrapper" >> build/requirements.txt
 
 container : prep
 	docker build -t $(CONTAINER) .
