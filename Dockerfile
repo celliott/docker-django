@@ -9,7 +9,6 @@ RUN apt-get update && apt-get -y install \
   python-setuptools \
   python-pip \
   python-virtualenv \
-  python-gunicorn \
   supervisor
 
 # stop supervisor service as we'll run it manually
