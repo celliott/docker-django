@@ -17,16 +17,19 @@ RUN service supervisor stop
 RUN apt-get build-dep -y python-imaging python-psycopg2
 
 # install virtualenv
-RUN pip install virtualenv
-RUN pip install virtualenvwrapper
-RUN pip install 'requests[security]'
+RUN pip install \
+  virtualenv \
+  virtualenvwrapper
 
 # create a virtual environment and install all dependencies from pypi
 RUN virtualenv /opt/venv
 ADD ./build/requirements.txt /opt/venv/requirements.txt
 RUN /opt/venv/bin/pip install -r /opt/venv/requirements.txt
 
-# expose port(s)
-EXPOSE 80
+ADD ./supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-CMD /bin/bash -l
+# expose port(s)
+EXPOSE 5000
+
+#CMD /bin/bash -l
+CMD ["/usr/bin/supervisord"]
