@@ -18,7 +18,8 @@ RUN apt-get build-dep -y python-imaging python-psycopg2
 
 # install virtualenv
 RUN pip install virtualenv
-RUN sudo pip install virtualenvwrapper
+RUN pip install virtualenvwrapper
+RUN pip install 'requests[security]'
 
 # create a virtual environment and install all dependencies from pypi
 RUN virtualenv /opt/venv
