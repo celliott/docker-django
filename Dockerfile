@@ -2,11 +2,12 @@ FROM ubuntu:14.04
 MAINTAINER MAINTAINER market-bridge dev <dev@market-bridge.com>
 
 RUN apt-get update && apt-get -y install \
-  build-essential git \
+  build-essential \
+  git \
   python \
-  python-dev 
+  python-dev \ 
   python-setuptools \
-  python-pip 
+  python-pip \
   python-virtualenv \
   python-gunicorn \
   supervisor
