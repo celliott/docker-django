@@ -8,7 +8,6 @@ RUN apt-get update && apt-get -y install \
   python-dev \ 
   python-setuptools \
   python-pip \
-  python-virtualenv \
   supervisor
 
 # stop supervisor service as we'll run it manually
