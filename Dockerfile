@@ -1,4 +1,4 @@
-FROM FROM ubuntu:14.04
+FROM ubuntu:14.04
 MAINTAINER MAINTAINER market-bridge dev <dev@market-bridge.com>
 
 RUN apt-get update && apt-get -y install \
