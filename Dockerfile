@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER chris elliott <ctell@gmail.com>
+MAINTAINER chris elliott <ctelliott@gmail.com>
 
 RUN apt-get update && apt-get -y install \
   build-essential \
