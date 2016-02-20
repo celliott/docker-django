@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER MAINTAINER market-bridge dev <dev@market-bridge.com>
+MAINTAINER chris elliott <ctell@gmail.com>
 
 RUN apt-get update && apt-get -y install \
   build-essential \
